@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cardápio do dia</title>
+</head>
+<body>
+    <form id="orderForm" action="Form.html" method="get" onsubmit="return updateForm()">
+        <h1>Vamos comer algo</h1>
+        <h3>Veja o que temos aqui</h3>
+        <ul>
+            <li>
+                <h1>Hamburguer</h1>
+                <h3>
+                    Carne bovina 100% angus, queijo cheddar, alface, tomate e maionese especial no pão brioche.
+                    <h4>R$29,90</h4>
+                    <label for="quantidade-hamburguer">Quantidade:</label>
+                    <input type="number" id="quantidade-hamburguer" name="quantidade-hamburguer" min="1" value="1"><br><br>
+                    <input type="checkbox" id="hamburguer" name="item" value="Hamburguer">
+                    <label for="hamburguer">Hamburguer</label>
+                </h3>
+            </li>
+            <li>
+                <h1>Salgados</h1>
+                <h3>
+                    Massa folhada recheada com salsicha e queijo, servido quente.
+                    <h4>R$15,60</h4>
+                    <label for="quantidade-salgados">Quantidade:</label>
+                    <input type="number" id="quantidade-salgados" name="quantidade-salgados" min="1" value="1"><br><br>
+                    <input type="checkbox" id="salgados" name="item" value="Salgados">
+                    <label for="salgados">Salgados</label>
+                </h3>
+            </li>
+            <li>
+                <h1>Bebidas</h1>
+                <h3>
+                    Coca-Cola, Guaraná Antarctica, Sprite, Fanta Laranja.
+                    <h4>R$ 6,90</h4>
+                    <label for="quantidade-bebidas">Quantidade:</label>
+                    <input type="number" id="quantidade-bebidas" name="quantidade-bebidas" min="1" value="1"><br><br>
+                    <input type="checkbox" id="bebidas" name="item" value="Bebidas">
+                    <label for="bebidas">Bebidas</label>
+                </h3>
+            </li>
+        </ul>
+        <h1>Qual sua forma de pagamento?</h1>
+        <div class="checkbox-container">
+            <input type="checkbox" id="cartao" name="pagamento" value="Cartão de crédito">
+            <label for="cartao" class="checkmark"></label>
+            Cartão de crédito
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="pix" name="pagamento" value="Pix">
+            <label for="pix" class="checkmark"></label>
+            Pix
+        </div>
+        <button type="submit">Enviar</button>
+
+        <input type="hidden" id="resumo" name="resumo">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

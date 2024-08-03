@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form-styles.css">
+    <title>Resumo do Pedido</title>
+</head>
+<body>
+    <h1>Resumo do Pedido</h1>
+    <form id="paymentForm" action="index.html" method="post" onsubmit="return showSummary()">
+        <h3>Nome:</h3>
+        <input type="text" name="nome" id="nome" placeholder="Nome" required>
+        <h3>Endereço:</h3>
+        <input type="text" name="endereco" id="endereco" placeholder="Endereço" required>
+        <h3>Resumo do Pedido:</h3>
+        <div id="resumo" class="resumo-box"></div>
+        <p>
+            <button type="reset">Excluir</button>
+            <button type="submit">Avançar</button>
+        </p>
+    </form>
+
+    <script src="form-script.js"></script>
+</body>
+</html>
